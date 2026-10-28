@@ -1,0 +1,11 @@
+# AI-CoPilot runtime dependencies
+# Tested with Python 3.12.10 on Windows 11.
+opencv-python==5.0.0.93
+mediapipe==1.1.1
+deepface==0.0.103
+numpy==2.5.4
+pygame==2.6.1
+
+# DeepFace 0.0.103 imports werkzeug from its image utilities but does not
+# consistently declare it as an install dependency. Keep it pinned explicitly.
+werkzeug==3.1.9

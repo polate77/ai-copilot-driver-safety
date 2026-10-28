@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+preview_*.png
+assets/alarm.wav
+
+# Personal emergency profile and local incident records stay on this machine.
+emergency_config.json
+incidents/
