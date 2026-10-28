@@ -20,6 +20,11 @@ the cockpit red, and brings the simulated vehicle to an emergency stop.
 > the location you configure, shows the simulated dispatch on screen, and writes a
 > local incident record.
 
+![AI-CoPilot live dashboard showing face lock, safe status, speed, smart AC, music, and emotion](docs/screenshots/dashboard-safe.png)
+
+*Live cockpit: face tracking, EAR, simulated vehicle state, emotion-aware music, and
+smart climate control.*
+
 ---
 
 ## Highlights
@@ -61,6 +66,15 @@ latches and the car remains stopped until **R** is pressed.
 
 The music panel simulates an infotainment state; it does not stream songs. Pygame is
 used for the audible SOS siren.
+
+### Emergency dispatch in action
+
+These captures show the local simulation using the demo "Paris Demo" profile. The
+countdown can be cancelled with **C**; after it expires, the record is written locally.
+
+| 10-second cancellation window | Simulated dispatch completed |
+|---|---|
+| ![Emergency dashboard with simulated dispatch countdown](docs/screenshots/emergency-countdown.png) | ![Emergency dashboard showing simulated call placed and local case ID](docs/screenshots/emergency-dispatched.png) |
 
 ---
 
@@ -209,6 +223,11 @@ AI-CoPilot/
 |-- assets/
 |   |-- face_landmarker.task   # MediaPipe Face Landmarker model (~3.6 MB)
 |   `-- alarm.wav              # two-tone siren, generated on first alarm startup
+|-- docs/
+|   `-- screenshots/           # README screenshots
+|       |-- dashboard-safe.png
+|       |-- emergency-countdown.png
+|       `-- emergency-dispatched.png
 |-- incidents/
 |   `-- emergency_incidents.jsonl  # local simulated-dispatch records (private)
 `-- .venv/                     # Python 3.12 virtual environment
